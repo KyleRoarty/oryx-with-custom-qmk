@@ -5,6 +5,7 @@
 #define SERIAL_NUMBER "Ane9G/aNmaqO"
 #define LAYER_STATE_8BIT
 #define COMBO_COUNT 4
+#define COMBO_SHOULD_TRIGGER
 
 #define RGB_MATRIX_STARTUP_SPD 60
 
