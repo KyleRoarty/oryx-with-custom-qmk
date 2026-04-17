@@ -68,9 +68,15 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo3, KC_ENTER),
 };
 
-
-
-
+#ifdef COMBO_SHOULD_TRIGGER
+bool combo_should_trigger(uint16_t combo_index, combo_t *combo, uint16_t keycode, keyrecord_t *record) {
+    /* Disable combo `SOME_COMBO` on layer `_LAYER_A` */
+    if (layer_state_is(3))
+        return false;
+    
+    return true;
+}
+#endif
 
 typedef struct {
     bool is_press_action;
